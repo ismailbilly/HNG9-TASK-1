@@ -5,16 +5,16 @@ const {userDetails} = require('./Helpers/userDetails')
 
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 const port = process.env.PORT || 3000;
-
 
 let mathOp,firstOperand,secondOperand
 
 app.post('/', (req,res)=>{
-   const {operation,x,y} =req.body
-   mathOp=operation
-   firstOperand=x
-   secondOperand=y;  
+   const {operation_type,x,y} =req.body
+   mathOp = operation_type
+   firstOperand = x
+   secondOperand = y
 })
 app.get('/', (req,res)=>{
      const result = mathOperations(mathOp,firstOperand,secondOperand)
