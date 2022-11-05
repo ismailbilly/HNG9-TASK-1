@@ -24,7 +24,7 @@ const port = process.env.PORT || 3000;
 //         "operation_type":`${mathOp}`
 //     })
 //  })
- app.post('/', (req,res)=>{
+ app.post('/api/calculate', (req,res)=>{
    const {operation_type,x,y} =req.body
    const result = mathOperations(operation_type,x,y)
     res.status(200).json({
