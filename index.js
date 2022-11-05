@@ -28,7 +28,7 @@ const port = process.env.PORT || 3000;
    const {operation_type,x,y} =req.body
    const result = mathOperations(operation_type,x,y)
     res.status(200).json({
-        "slackUsername": "Bilkisu Ismail",
+        "slackUsername": "ismail.bilkisu",
         "result": result,
         "operation_type":`${operation_type}`
     })
